@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body style="background-color: rgba(65, 231, 198, 0.63); text-align: center;">
+    <h3>&#127777 Temperature Converter &#127777</h3>
+    <p style="color:rgb(166, 68, 236)"> &#8594 converting temperature from celsius to fahrenheit</p>
+    <input type="number" id="number1" placeholder="enter temperature in celsius">
+    <button onclick="ctof()">celsius to fahrenheit</button>
+    <p id="result"></p>
+    
+    <p style="color:rgb(247, 17, 78)"> &#8594 Converting temperature from fahrenheit to celsius</p>
+    <input type="number" id="number2" placeholder="enter temperature in fahrenheit">
+    <button onclick="ftoc()">Fahrenheit to Celsius</button>
+    <p id="results"></p>
+    
+    <script>
+        function ctof(){
+            var number1=parseFloat(document.getElementById("number1").value);
+            var fahrenheit=(number1*1.8)+32;
+            document.getElementById("result").innerHTML= "Fahrenheit is:" + " " + fahrenheit.toFixed(3);
+        }
+   
+        function ftoc(){
+            var number2=parseFloat(document.getElementById("number2").value);
+            var celsius=(number2-32) * (5/9);
+            document.getElementById("results").innerHTML= "Celsius is :" + " " + celsius.toFixed(3);
+        }
+    </script>
+</body>
+</html>
